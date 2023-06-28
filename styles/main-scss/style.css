@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .container {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .container .page-title {
+  font-size: 2rem;
+  line-height: 1rem;
+  letter-spacing: 2px;
+  color: rgb(65, 64, 62);
+  text-transform: uppercase;
+}
+body .container .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+body .container .box-container .box-css {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  cursor: pointer;
+}
+body .container .box-container .box-css .tilt-box {
+  color: #FFF;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  aspect-ratio: 1/2;
+  border-radius: 10px;
+  transition: all 500ms ease;
+  transform-style: preserve-3d;
+  background-image: url("https://w0.peakpx.com/wallpaper/122/842/HD-wallpaper-splat-black-cartoon-character-emoji-face-funny-humor-joke-kids-laugh-thumbnail.jpg");
+  background-position: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+body .container .box-container .box-css .cell {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+body .container .box-container .box-css .cell:nth-child(1):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(-20deg) rotateY(20deg);
+}
+body .container .box-container .box-css .cell:nth-child(2):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(-20deg) rotateY(0deg);
+}
+body .container .box-container .box-css .cell:nth-child(3):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(-20deg) rotateY(-20deg);
+}
+body .container .box-container .box-css .cell:nth-child(4):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(0) rotateY(20deg);
+}
+body .container .box-container .box-css .cell:nth-child(5):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(0) rotateY(0deg);
+}
+body .container .box-container .box-css .cell:nth-child(6):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(0) rotateY(-20deg);
+}
+body .container .box-container .box-css .cell:nth-child(7):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(20deg) rotateY(20deg);
+}
+body .container .box-container .box-css .cell:nth-child(8):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(20deg) rotateY(0deg);
+}
+body .container .box-container .box-css .cell:nth-child(9):hover ~ .tilt-box {
+  transform: perspective(600px) rotateX(20deg) rotateY(-20deg);
+}
+body .container .box-container .box-css .cell:nth-of-type(3n) {
+  grid-column: 3/4;
+}
+body .container .box-container .box-css .cell:nth-of-type(3n - 1) {
+  grid-column: 2/3;
+}
+body .container .box-container .box-css .cell:nth-of-type(3n - 2) {
+  grid-column: 1/2;
+}
+body .container .box-container .box-css .cell:nth-child(n+1):nth-child(-n+3) {
+  grid-row: 1/2;
+}
+body .container .box-container .box-css .cell:nth-child(n+4):nth-child(-n+6) {
+  grid-row: 2/3;
+}
+body .container .box-container .box-css .cell:nth-child(n+7):nth-child(-n+9) {
+  grid-row: 3/4;
+}
+body .container .box-container .box-js {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+body .container .box-container .box-js .box-js-content {
+  width: 179px;
+  height: 357px;
+}
+body .container .box-container .box-js .box-js-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
